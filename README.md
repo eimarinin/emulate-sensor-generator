@@ -1,4 +1,4 @@
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/305f42e6-83c4-472e-99fa-931daf110ace)
 
 # Этот простой код выполяет следующий алгоритм:
 На вход: 
