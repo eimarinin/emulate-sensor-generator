@@ -1,3 +1,5 @@
+# Все окей
+
 import random
 import time
 import csv
