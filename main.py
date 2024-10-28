@@ -3,7 +3,7 @@ import time
 import csv
 from datetime import datetime
 
-# ЫЫЫ
+# Тест
 
 
 # Эмулятор датчика
