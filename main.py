@@ -5,17 +5,21 @@ import time
 import csv
 from datetime import datetime
 
+# ЫЫЫ
+
 
 # Эмулятор датчика
-def emulate_sensor(min_value, max_value, metric_name, unit, filename='sensor_data.csv'):
+def emulate_sensor(min_value, max_value, metric_name, unit, filename="sensor_data.csv"):
     values = []
     start_time = time.time()
 
-    with open(filename, mode='a', newline='') as file:
+    with open(filename, mode="a", newline="") as file:
         writer = csv.writer(file)
 
         # Записываем заголовки в файл
-        writer.writerow(['Дата и время', 'Название метрики', 'Значение', 'Единица измерения'])
+        writer.writerow(
+            ["Дата и время", "Название метрики", "Значение", "Единица измерения"]
+        )
 
         while True:
             current_time = time.time()
@@ -27,7 +31,7 @@ def emulate_sensor(min_value, max_value, metric_name, unit, filename='sensor_dat
             # Усредняем и сохраняем данные раз в минуту
             if current_time - start_time >= 60:
                 average_value = sum(values) / len(values)
-                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
                 # Сохраняем данные в файл
                 writer.writerow([timestamp, metric_name, f"{average_value:.2f}", unit])
@@ -39,4 +43,4 @@ def emulate_sensor(min_value, max_value, metric_name, unit, filename='sensor_dat
 
 
 # Пример использования
-emulate_sensor(min_value=20, max_value=25, metric_name='Температура', unit='°C')
+emulate_sensor(min_value=20, max_value=25, metric_name="Температура", unit="°C")
